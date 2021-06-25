@@ -24,5 +24,5 @@ output "random_id" {
 }
 
 output "lock_test" {
-  value = "should-not-appear"
+  value = var.lock_test
 }
