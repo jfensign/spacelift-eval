@@ -3,6 +3,11 @@ variable "byte_length" {
   default = 8
 }
 
+variable "lock_test" {
+  type = string
+  default = "should-not-appear"
+}
+
 resource "random_id" "random" {
   keepers = {
     uuid = uuid()
@@ -16,4 +21,8 @@ output "random" {
 
 output "random_id" {
   value = random_id.random.id
+}
+
+output "lock_test" {
+  value = "should-not-appear"
 }
