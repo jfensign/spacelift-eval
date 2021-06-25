@@ -1,6 +1,6 @@
 variable "byte_length" {
   type = number
-  default = 8
+  default = 5
 }
 
 variable "lock_test" {
