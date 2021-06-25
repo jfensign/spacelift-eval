@@ -1,6 +1,6 @@
 variable "byte_length" {
   type = number
-  default = 8
+  default = 5
 }
 
 variable "lock_test" {
@@ -24,5 +24,5 @@ output "random_id" {
 }
 
 output "lock_test" {
-  value = "should-not-appear"
+  value = var.lock_test
 }
