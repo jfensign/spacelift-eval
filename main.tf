@@ -3,9 +3,17 @@ variable "byte_length" {
   default = 5
 }
 
+variable "account_labels" {
+  type = string
+}
+
 variable "lock_test" {
   type = string
   default = "should-not-appear"
+}
+
+locals {
+  labels = jsondecode(var.account_labels)
 }
 
 resource "random_id" "random" {
@@ -17,6 +25,10 @@ resource "random_id" "random" {
 
 output "random" {
   value = random_id.random.hex
+}
+
+output "labels" {
+  value = local.labels
 }
 
 output "random_id" {
