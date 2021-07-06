@@ -13,7 +13,7 @@ variable "lock_test" {
 }
 
 locals {
-  "labels" = jsondecode(var.account_labels)
+  labels = jsondecode(var.account_labels)
 }
 
 resource "random_id" "random" {
